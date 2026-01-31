@@ -6,18 +6,16 @@ import OverlayUI from '../components/UI/OverlayUI';
 import '../styles/globals.css';
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setIsLoading(false), 3000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-gray-900 via-slate-900 to-gray-950">
-      {isLoading ? (
-        <LoadingScreen />
-      ) : (
+      
         <>
           <Canvas
             shadows
@@ -37,9 +35,8 @@ export default function App() {
               <Scene />
             </Suspense>
           </Canvas>
-          <OverlayUI />
+          {/* <OverlayUI /> */}
         </>
-      )}
     </div>
   );
 }
